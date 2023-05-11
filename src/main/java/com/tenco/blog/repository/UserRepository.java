@@ -8,5 +8,9 @@ import com.tenco.blog.model.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 	// select, select All, insert, update, delete 등을 만들어줌
 	
+	// Spring JPA 네이밍 전략
+	// 메서드 이름으로 JPA가 쿼리를 만들어줌 (규칙을 지켜준다면)
+	// SELECT * FROM user WHERE username = ? AND password = ?
+	User findByUsernameAndPassword(String username, String password);
 	
 } // end of class
