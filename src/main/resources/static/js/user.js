@@ -18,7 +18,7 @@ let index = {
 		
 		$.ajax({
 			type: "POST",
-			url: "/api/user",
+			url: "/auth/api/user",
 			contentType: "application/json; charset=utf-8",
 			data: JSON.stringify(data), // http body
 			dataType: "json" // 응답시 데이터 타입
@@ -48,9 +48,8 @@ let index = {
 			data: JSON.stringify(data),
 			dataType: "json"
 		}).done(function(res) {
-			// if(res.~~~)
 			alert("로그인 완료 되었습니다.");
-			// location.href="/";
+			location.href="/";
 		}).fail(function(error) {
 			alert("로그인에 실패 하였습니다.");
 			console.log(error);

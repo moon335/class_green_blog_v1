@@ -12,5 +12,4 @@ public class BoardController {
 		return "/index";
 	}
 	
-	
 } // end of class
